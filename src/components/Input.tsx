@@ -6,6 +6,7 @@ interface InputProps {
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
+  error?: boolean;
 }
 
 /**
@@ -15,6 +16,7 @@ const Input: React.FunctionComponent<InputProps> = ({
   value,
   onChange,
   placeholder,
+  error,
 }) => {
   return (
     <input
@@ -22,7 +24,7 @@ const Input: React.FunctionComponent<InputProps> = ({
       value={value}
       onChange={onChange}
       placeholder={placeholder}
-      className={styles.input}
+      className={`${styles.input} ${error ? styles.errored : ""}`}
     />
   );
 };
