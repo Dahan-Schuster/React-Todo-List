@@ -1,0 +1,9 @@
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container :first-child {
+	margin-right: 0.5rem;
+}
