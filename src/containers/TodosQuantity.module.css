@@ -1,0 +1,26 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quantityWrapper {
+  font-weight: 700;
+	font-size: var(--font-small);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quantityWrapper :first-child {
+	margin-right: 0.5rem;
+}
+
+.created {
+  color: var(--blue);
+}
+
+.completed {
+  color: var(--purple);
+}
