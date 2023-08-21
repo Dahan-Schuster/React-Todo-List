@@ -3,6 +3,7 @@ import "./global.css";
 
 import styles from "./App.module.css";
 import CreateTodo from "./containers/CreateTodo";
+import TodosQuantity from "./containers/TodosQuantity";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <CreateTodo />
       </section>
       <section className={styles.listSection}>
+        <TodosQuantity />
       </section>
     </div>
   );
