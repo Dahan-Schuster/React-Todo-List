@@ -36,7 +36,3 @@ body, input, textarea, button {
 	font-size: var(--font-normal);
 	font-weight: 400;
 }
-
-input, button {
-	height: 54px;
-}
