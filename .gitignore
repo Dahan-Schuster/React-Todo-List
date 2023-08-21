@@ -1,3 +1,7 @@
+# Vim
+**/.undodir
+**/Session.vim
+
 # Logs
 logs
 *.log
