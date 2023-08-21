@@ -13,3 +13,16 @@
 	width: 126px;
 	height: auto;
 }
+
+.mainSection {
+	width: 736px;
+	margin: 0 auto;
+	transform: translateY(-50%);
+}
+
+@media screen and (max-width: 767px) {
+	.mainSection {
+		width: 100%;
+		padding: 0 0.5rem;
+	}
+}
