@@ -1,12 +1,7 @@
 import React from "react";
 
 import { v4 as uuid } from "uuid";
-
-type TodoType = {
-  description: string;
-  completed: boolean;
-  id: string;
-};
+import { TodoType } from "../declarations/todos";
 
 interface TodosContextValue {
   todosList: TodoType[];
