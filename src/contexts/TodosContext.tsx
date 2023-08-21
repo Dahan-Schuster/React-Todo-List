@@ -1,5 +1,7 @@
 import React from "react";
 
+import { v4 as uuid } from "uuid";
+
 type TodoType = {
   description: string;
   completed: boolean;
@@ -26,11 +28,12 @@ export const TodosProvider: React.FC<{ children: React.ReactNode }> = ({
     if (!newTodoDescription) return;
 
     const newTodo = {
-      id: "dasdas",
+      id: uuid(),
       description: newTodoDescription,
       completed: false,
     };
 
+		console.log(newTodo);
     setTodosList((list) => [...list, newTodo]);
   }, []);
 
