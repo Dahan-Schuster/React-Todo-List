@@ -1,0 +1,26 @@
+.itemContainer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding: 1rem;
+  background-color: var(--gray-500);
+  color: var(--gray-100);
+	border-radius: 0.5rem;
+	margin-bottom: 0.75rem;;
+
+	transition: all 0.2s linear;
+	user-select: none;
+  cursor: pointer;
+}
+
+.itemContainer span {
+	padding: 0 0.75rem;
+	white-space: pre-wrap;
+	flex: 1;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: var(--gray-300);
+}
