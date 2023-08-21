@@ -2,7 +2,7 @@ import type { FunctionComponent }  from "react";
 
 import styles from "./Header.module.css";
 
-import logo from "../../assets/Logo.svg";
+import logo from "../assets/Logo.svg";
 
 /**
 * Componente de cabeçalho do app
