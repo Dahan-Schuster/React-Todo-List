@@ -15,6 +15,8 @@ interface TodosContextValue {
 const TodosContext = React.createContext<TodosContextValue | null>(null);
 export default TodosContext;
 
+import config from "../config";
+
 /**
  * Contexto para armazenamento de ToDos
  */
@@ -22,6 +24,37 @@ export const TodosProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const [todosList, setTodosList] = React.useState<TodoType[]>([]);
+
+  /**
+   * Preenche o estado com a lista salva no storage, se houver
+   */
+  React.useEffect(() => {
+		try {
+			const storedList = JSON.parse(
+				localStorage.getItem(config.keysStorage.todosList) || "[]"
+			) as TodoType[];
+			if (storedList?.length > 0 && storedList[0].id) {
+				setTodosList(storedList);
+			}
+		} catch {
+			console.log("Dados inválidos no storage, inicializando com estado vazio");
+		}
+  }, []);
+
+  /**
+   * Atualiza o valor da lista de Todos no localStorage sempre
+   * que o estado da lista mudar
+   */
+  React.useEffect(() => {
+    localStorage.setItem(
+      config.keysStorage.todosList,
+      JSON.stringify(todosList)
+    );
+
+    return () => {
+      localStorage.removeItem(config.keysStorage.todosList);
+    };
+  }, [todosList]);
 
   /**
    * Método para adicionar itens à lista de Todos
