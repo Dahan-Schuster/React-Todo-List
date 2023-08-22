@@ -16,3 +16,8 @@
 	color: var(--danger);
 }
 
+.button.withOneClick {
+	background-color: var(--danger);
+	color: var(--gray-100);
+}
+
